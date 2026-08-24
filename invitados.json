@@ -1,5 +1,5 @@
 {
-  "A3F9": { "nombre": "Familia Figueroa", "pases": 32 },
-  "B7K2": { "nombre": "Familia Corcuera", "pases": 4 },
-  "C1M8": { "nombre": "Familia Caballero", "pases": 7 }
+  "A3F9": { "nombre": "Familia Figueroa", "pases": 32, "regalos": false },
+  "B7K2": { "nombre": "Familia Corcuera", "pases": 4, "regalos": true },
+  "C1M8": { "nombre": "Familia Caballero", "pases": 7, "regalos": true }
 }
