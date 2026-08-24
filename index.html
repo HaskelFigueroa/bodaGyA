@@ -74,6 +74,12 @@
     text-transform:uppercase; color: var(--olive-soft); opacity:.75;
     animation: pulseHint 2.6s ease-in-out infinite;
   }
+  .cover-guest-name{
+    display:none; margin-top:-1.6rem;
+    font-family: var(--script); font-size: clamp(1.4rem, 4vw, 1.9rem);
+    color: var(--olive);
+  }
+  .cover-guest-name::before{ content:"Para "; font-family: var(--serif); font-style:italic; font-size:.85rem; color: var(--moss); display:block; margin-bottom:.15rem; letter-spacing:.04em; }
   @keyframes pulseHint{
     0%,100%{ opacity:.4; transform:translateY(0); }
     50%{ opacity:.9; transform:translateY(-3px); }
@@ -472,6 +478,7 @@
 <div class="cover" id="cover">
   <div class="cover-inner">
     <span class="cover-eyebrow">Guido &amp; Aletheia</span>
+    <span class="cover-guest-name" id="coverGuestName"></span>
     <div class="scene" id="scene" role="button" tabindex="0" aria-label="Abrir invitación">
       <div class="envelope" id="envelope">
         <div class="env-back"></div>
@@ -501,9 +508,9 @@
     <div class="hero-frame" aria-hidden="true"></div>
     <!-- FOTO 1 (principal): reemplaza el src por la foto de la pareja -->
     <div class="hero-photo reveal">
-      <img src="https://picsum.photos/seed/guido-aletheia-hero/300/300" alt="Guido y Aletheia">
+      <img src="ga.jpg" alt="Guido y Aletheia">
     </div>
-    <span class="eyebrow reveal" id="guestGreeting">Nos casamos</span>
+    <span class="eyebrow reveal">Nos casamos</span>
     <h1 class="hero-names reveal">Guido <span class="hero-amp">&amp;</span> Aletheia</h1>
     <p class="hero-sub reveal">Con la bendición de Dios y de nuestras familias, queremos compartir contigo el día más importante de nuestras vidas.</p>
     <div class="hero-date reveal">
@@ -746,8 +753,11 @@
         guestData = list[key];
         guestData.code = key;
 
-        var greeting = document.getElementById('guestGreeting');
-        if(greeting && guestData.nombre){ greeting.textContent = 'Nos casamos · Para ' + guestData.nombre; }
+        var coverName = document.getElementById('coverGuestName');
+        if(coverName && guestData.nombre){
+          coverName.textContent = guestData.nombre;
+          coverName.style.display = 'block';
+        }
 
         var nameInput = document.getElementById('name');
         if(nameInput && guestData.nombre && !nameInput.value){ nameInput.value = guestData.nombre; }
