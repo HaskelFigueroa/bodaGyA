@@ -1,5 +1,9 @@
 {
-  "A3F9": { "nombre": "Familia Figueroa", "pases": 32, "regalos": false },
-  "B7K2": { "nombre": "Familia Corcuera", "pases": 4, "regalos": true },
+  "G1F2": { "nombre": "Mario Figueroa y Familia", "pases": 9, "regalos": false },
+  "G1F3": { "nombre": "Italo Figueroa y Familia", "pases": 5, "regalos": false },
+  "G2F1": { "nombre": "Da'at Figueroa y Familia", "pases": 8, "regalos": true },
+  "G2F2": { "nombre": "Haskel Figueroa y Familia", "pases": 4, "regalos": false },
+  "B7C1": { "nombre": "Familia Corcuera", "pases": 4, "regalos": true },
+  "B4C3": { "nombre": "Valeria Cobarrubias", "pases": 1, "regalos": true },
   "C1M8": { "nombre": "Familia Caballero", "pases": 7, "regalos": true }
 }
