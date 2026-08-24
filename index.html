@@ -969,6 +969,8 @@
         if(giftSection && guestData.regalos === false){
           giftSection.style.display = 'none';
         }
+        var rsvpSection = document.getElementById('rsvp-section');
+        rsvpSection.style = '';
       })
       .catch(function(){ /* sin invitados.json o error de red: seguimos con la versión genérica */ });
   })();
