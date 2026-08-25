@@ -952,7 +952,9 @@ window.addEventListener('load', function(){
   function openEnvelope(){
   if(opened) return;
   opened = true;
-
+  // Si el autoplay fue bloqueado, el toque al sobre
+  // permite iniciar la música.
+  startWeddingMusic();
   // =====================================================
   // ETAPA 1: abrir la solapa y girar el sello
   // =====================================================
