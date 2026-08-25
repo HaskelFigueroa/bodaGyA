@@ -622,6 +622,9 @@
 </style>
 </head>
 <body class="locked">
+<audio id="openSound" preload="auto" autoplay muted playsinline>
+  <source src="./gmJ.mp3" type="audio/mpeg">
+</audio>
 
 <div class="bg-foliage" aria-hidden="true">
   <svg viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -890,6 +893,61 @@
   var main = document.getElementById('main');
   var body = document.body;
   var opened = false;
+
+function startWeddingMusic(){
+  var audio = document.getElementById('openSound');
+  if(!audio) return;
+
+  audio.volume = 0;
+
+  var playPromise = audio.play();
+
+  if(playPromise !== undefined){
+    playPromise
+      .then(function(){
+
+        // Quitamos mute después de que el navegador haya
+        // permitido iniciar la reproducción.
+        audio.muted = false;
+
+        var startVolume = 0.02;
+        var targetVolume = 0.72;
+        var duration = 3000; // 5 segundos
+
+        audio.volume = startVolume;
+
+        var startTime = performance.now();
+
+        function fadeIn(now){
+          var elapsed = now - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+
+          // Curva suave
+          var eased = progress * progress * (3 - 2 * progress);
+
+          audio.volume =
+            startVolume +
+            (targetVolume - startVolume) * eased;
+
+          if(progress < 1){
+            requestAnimationFrame(fadeIn);
+          }
+        }
+
+        requestAnimationFrame(fadeIn);
+
+      })
+      .catch(function(){
+        // El navegador bloqueó autoplay.
+        // Lo intentaremos nuevamente al tocar el sobre.
+      });
+  }
+}
+
+window.addEventListener('load', function(){
+  startWeddingMusic();
+});
+
 
   function openEnvelope(){
   if(opened) return;
