@@ -3,7 +3,17 @@
   "G1F3": { "nombre": "Italo Figueroa y Familia", "pases": 5, "regalos": false },
   "G2F1": { "nombre": "Da'at Figueroa y Familia", "pases": 8, "regalos": true },
   "G2F2": { "nombre": "Haskel Figueroa y Familia", "pases": 4, "regalos": false },
+  "G2E2": { "nombre": "Dalet Figueroa y Familia", "pases": 4, "regalos": false },  
+  "G2E1": { "nombre": "Liset Figueroa y Familia", "pases": 4, "regalos": false },
+  "G2F3": { "nombre": "Dabar Figueroa", "pases": 1, "regalos": false },
+  "G2F4": { "nombre": "Ayelet Figueroa", "pases": 1, "regalos": false },
+  "G2F5": { "nombre": "Eliya Figueroa", "pases": 1, "regalos": false },
+  "G2F6": { "nombre": "Tsedeq Figueroa", "pases": 1, "regalos": false },  
+  "G2F9": { "nombre": "Athar Figueroa", "pases": 1, "regalos": false },
+  "G4F1": { "nombre": "Kathab Figueroa", "pases": 1, "regalos": false },
+  "G3F7": { "nombre": "Italo Figueroa", "pases": 1, "regalos": false },
+  "G4F6": { "nombre": "Eliet Figueroa", "pases": 1, "regalos": false },
   "B7C1": { "nombre": "Familia Corcuera", "pases": 4, "regalos": true },
-  "B4C3": { "nombre": "Valeria Cobarrubias", "pases": 1, "regalos": true },
+  "B4C3": { "nombre": "Valeria Cobarrubias Loya", "pases": 1, "regalos": true },
   "C1M8": { "nombre": "Familia Caballero", "pases": 7, "regalos": true }
 }
